@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <div class="calculator">
+  <div class="display">
+    <input type="text" id="result" value="0">
+  </div>
+  <div class="keypad">
+    <button class="number" onclick="input(7)">7</button>
+    <button class="number" onclick="input(8)">8</button>
+    <button class="number" onclick="input(9)">9</button>
+    <button class="operator" onclick="input('+')">+</button>
+    <button class="number" onclick="input(4)">4</button>
+    <button class="number" onclick="input(5)">5</button>
+    <button class="number" onclick="input(6)">6</button>
+    <button class="operator" onclick="input('-')">-</button>
+    <button class="number" onclick="input(1)">1</button>
+    <button class="number" onclick="input(2)">2</button>
+    <button class="number" onclick="input(3)">3</button>
+    <button class="operator" onclick="input('*')">*</button>
+    <button class="number" onclick="input(0)">0</button>
+    <button class="operator" onclick="input('/')">/</button>
+    <button class="clear" onclick="clearInput()">C</button>
+    <button class="equals" onclick="calculate()">=</button>
+  </div>
+</div>
+
+
+<!-------------SCIPT CODE------------------->
+
+<script>
+
+let result = document.getElementById("result");
+
+function input(val) {
+  result.value += val;
+}
+
+function clearInput() {
+  result.value = "0";
+}
+
+function calculate() {
+  result.value = eval(result.value);
+}
+
+</script>
+
+
+</body>
+</html>
